@@ -1,0 +1,12 @@
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csprojAssemblyReference.cache
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.AssemblyInfoInputs.cache
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.AssemblyInfo.cs
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.deps.json
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.dll
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.pdb
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.dll
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.pdb
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csproj.CopyComplete
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.dll
+C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.pdb

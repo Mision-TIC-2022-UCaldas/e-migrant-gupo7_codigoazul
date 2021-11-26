@@ -1,0 +1,79 @@
+@page
+@model E_Migrant.App.Presentacion.Pages.CrudMigrante.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Migrante</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.Nombres)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.Nombres)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.NumeroDocumento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.NumeroDocumento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.FechaNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.FechaNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.NumeroTelefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.NumeroTelefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.DireccionActual)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.DireccionActual)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.Usuario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.Usuario)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.Contraseña)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.Contraseña)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Migrante.rol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Migrante.rol)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Migrante.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
