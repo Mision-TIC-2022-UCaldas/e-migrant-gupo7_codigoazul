@@ -1,0 +1,75 @@
+@page
+@model E_Migrant.App.Presentacion.Pages.CrudEntidad.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Entidad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Entidad.Id" />
+            <div class="form-group">
+                <label asp-for="Entidad.RazonSocial" class="control-label"></label>
+                <input asp-for="Entidad.RazonSocial" class="form-control" />
+                <span asp-validation-for="Entidad.RazonSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Nit" class="control-label"></label>
+                <input asp-for="Entidad.Nit" class="form-control" />
+                <span asp-validation-for="Entidad.Nit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Direccion" class="control-label"></label>
+                <input asp-for="Entidad.Direccion" class="form-control" />
+                <span asp-validation-for="Entidad.Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Telefono" class="control-label"></label>
+                <input asp-for="Entidad.Telefono" class="form-control" />
+                <span asp-validation-for="Entidad.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Email" class="control-label"></label>
+                <input asp-for="Entidad.Email" class="form-control" />
+                <span asp-validation-for="Entidad.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.PaginaWeb" class="control-label"></label>
+                <input asp-for="Entidad.PaginaWeb" class="form-control" />
+                <span asp-validation-for="Entidad.PaginaWeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Usuario" class="control-label"></label>
+                <input asp-for="Entidad.Usuario" class="form-control" />
+                <span asp-validation-for="Entidad.Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.Contraseña" class="control-label"></label>
+                <input asp-for="Entidad.Contraseña" class="form-control" />
+                <span asp-validation-for="Entidad.Contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad.rol" class="control-label"></label>
+                <input asp-for="Entidad.rol" class="form-control" />
+                <span asp-validation-for="Entidad.rol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
