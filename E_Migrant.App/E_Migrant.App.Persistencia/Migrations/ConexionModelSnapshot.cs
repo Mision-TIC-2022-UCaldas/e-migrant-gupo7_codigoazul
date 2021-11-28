@@ -175,7 +175,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.ToTable("Sector");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
+            modelBuilder.Entity("E_Migrant.App.Dominio.Servicios", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -209,7 +209,7 @@ namespace E_Migrant.App.Persistencia.Migrations
 
                     b.HasIndex("TipoServicioId");
 
-                    b.ToTable("Servicio");
+                    b.ToTable("Servicios");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.SituacionLaboral", b =>
@@ -304,7 +304,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("TipoDocumento");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
+            modelBuilder.Entity("E_Migrant.App.Dominio.Servicios", b =>
                 {
                     b.HasOne("E_Migrant.App.Dominio.Entidad", "Entidad")
                         .WithMany()

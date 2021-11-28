@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using E_Migrant.App.Dominio;
 using E_Migrant.App.Persistencia.AppRepositorios;
 
-namespace E_Migrant.App.Presentacion.Pages.CrudServicio
+namespace E_Migrant.App.Presentacion.Pages.CrudServicios
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
             _context = context;
         }
 
-        public Servicio Servicio { get; set; }
+        public Servicios Servicios { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
                 return NotFound();
             }
 
-            Servicio = await _context.Servicio.FirstOrDefaultAsync(m => m.Id == id);
+            Servicios = await _context.Servicios.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Servicio == null)
+            if (Servicios == null)
             {
                 return NotFound();
             }

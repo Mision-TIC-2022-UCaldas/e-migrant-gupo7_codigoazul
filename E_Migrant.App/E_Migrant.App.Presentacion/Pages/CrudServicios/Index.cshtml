@@ -1,5 +1,5 @@
 @page
-@model E_Migrant.App.Presentacion.Pages.CrudServicio.IndexModel
+@model E_Migrant.App.Presentacion.Pages.CrudServicios.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,25 +14,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Servicio[0].NombreServicio)
+                @Html.DisplayNameFor(model => model.Servicios[0].NombreServicio)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Servicio[0].FechaInicioOferta)
+                @Html.DisplayNameFor(model => model.Servicios[0].MaximoMigrantes)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Servicio[0].FechaFinOferta)
+                @Html.DisplayNameFor(model => model.Servicios[0].FechaInicioOferta)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Servicio[0].Estado)
+                @Html.DisplayNameFor(model => model.Servicios[0].FechaFinOferta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios[0].Estado)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Servicio) {
+@foreach (var item in Model.Servicios) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.NombreServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximoMigrantes)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaInicioOferta)

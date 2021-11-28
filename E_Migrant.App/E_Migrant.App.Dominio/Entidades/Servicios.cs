@@ -2,7 +2,7 @@ using System;
 
 namespace E_Migrant.App.Dominio
 {
-    public class Servicio
+    public class Servicios
     {
         public int Id {get; set;}
         public string NombreServicio {get; set;}

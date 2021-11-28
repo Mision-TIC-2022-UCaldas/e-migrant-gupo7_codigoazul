@@ -1,0 +1,54 @@
+@page
+@model E_Migrant.App.Presentacion.Pages.CrudServicios.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Servicios</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Servicios.NombreServicio" class="control-label"></label>
+                <input asp-for="Servicios.NombreServicio" class="form-control" />
+                <span asp-validation-for="Servicios.NombreServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicios.MaximoMigrantes" class="control-label"></label>
+                <input asp-for="Servicios.MaximoMigrantes" class="form-control" />
+                <span asp-validation-for="Servicios.MaximoMigrantes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicios.FechaInicioOferta" class="control-label"></label>
+                <input asp-for="Servicios.FechaInicioOferta" class="form-control" />
+                <span asp-validation-for="Servicios.FechaInicioOferta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicios.FechaFinOferta" class="control-label"></label>
+                <input asp-for="Servicios.FechaFinOferta" class="form-control" />
+                <span asp-validation-for="Servicios.FechaFinOferta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicios.Estado" class="control-label"></label>
+                <input asp-for="Servicios.Estado" class="form-control" />
+                <span asp-validation-for="Servicios.Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

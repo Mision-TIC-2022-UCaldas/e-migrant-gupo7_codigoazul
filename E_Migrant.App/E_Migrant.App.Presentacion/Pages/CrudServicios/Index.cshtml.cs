@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using E_Migrant.App.Dominio;
 using E_Migrant.App.Persistencia.AppRepositorios;
 
-namespace E_Migrant.App.Presentacion.Pages.CrudServicio
+namespace E_Migrant.App.Presentacion.Pages.CrudServicios
 {
     public class IndexModel : PageModel
     {
@@ -19,11 +19,11 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
             _context = context;
         }
 
-        public IList<Servicio> Servicio { get;set; }
+        public IList<Servicios> Servicios { get;set; }
 
         public async Task OnGetAsync()
         {
-            Servicio = await _context.Servicio.ToListAsync();
+            Servicios = await _context.Servicios.ToListAsync();
         }
     }
 }

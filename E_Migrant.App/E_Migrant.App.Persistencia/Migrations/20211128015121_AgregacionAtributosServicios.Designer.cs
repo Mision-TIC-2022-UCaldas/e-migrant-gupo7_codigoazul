@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(Conexion))]
-    [Migration("20211127035446_AgregacionCorporaciones")]
-    partial class AgregacionCorporaciones
+    [Migration("20211128015121_AgregacionAtributosServicios")]
+    partial class AgregacionAtributosServicios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -177,7 +177,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.ToTable("Sector");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
+            modelBuilder.Entity("E_Migrant.App.Dominio.Servicios", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -196,6 +196,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaInicioOferta")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("MaximoMigrantes")
+                        .HasColumnType("int");
+
                     b.Property<string>("NombreServicio")
                         .HasColumnType("nvarchar(max)");
 
@@ -208,7 +211,7 @@ namespace E_Migrant.App.Persistencia.Migrations
 
                     b.HasIndex("TipoServicioId");
 
-                    b.ToTable("Servicio");
+                    b.ToTable("Servicios");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.SituacionLaboral", b =>
@@ -303,7 +306,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("TipoDocumento");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
+            modelBuilder.Entity("E_Migrant.App.Dominio.Servicios", b =>
                 {
                     b.HasOne("E_Migrant.App.Dominio.Entidad", "Entidad")
                         .WithMany()

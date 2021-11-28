@@ -11,7 +11,7 @@ namespace E_Migrant.App.Persistencia.AppRepositorios
         public DbSet<SituacionLaboral> SituacionLaboral {get; set;}
         public DbSet<TipoDoc> TipoDoc {get; set;}
         public DbSet<Migrante> Migrantes {get; set;}
-        public DbSet<Servicio> Servicio {get; set;}
+        public DbSet<Servicios> Servicios {get; set;}
         public DbSet<Sector> Sector {get; set;}
         public DbSet<TipoServicio> TipoServicio {get; set;}
         public DbSet<Entidad> Entidades {get; set;}

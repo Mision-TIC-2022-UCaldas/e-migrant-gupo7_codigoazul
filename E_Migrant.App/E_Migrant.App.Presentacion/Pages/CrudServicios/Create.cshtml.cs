@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using E_Migrant.App.Dominio;
 using E_Migrant.App.Persistencia.AppRepositorios;
 
-namespace E_Migrant.App.Presentacion.Pages.CrudServicio
+namespace E_Migrant.App.Presentacion.Pages.CrudServicios
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
         }
 
         [BindProperty]
-        public Servicio Servicio { get; set; }
+        public Servicios Servicios { get; set; }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
@@ -36,7 +36,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
                 return Page();
             }
 
-            _context.Servicio.Add(Servicio);
+            _context.Servicios.Add(Servicios);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

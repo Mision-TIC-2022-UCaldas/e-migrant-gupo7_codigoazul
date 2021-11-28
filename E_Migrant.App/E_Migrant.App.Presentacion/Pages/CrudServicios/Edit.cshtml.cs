@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using E_Migrant.App.Dominio;
 using E_Migrant.App.Persistencia.AppRepositorios;
 
-namespace E_Migrant.App.Presentacion.Pages.CrudServicio
+namespace E_Migrant.App.Presentacion.Pages.CrudServicios
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
         }
 
         [BindProperty]
-        public Servicio Servicio { get; set; }
+        public Servicios Servicios { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
                 return NotFound();
             }
 
-            Servicio = await _context.Servicio.FirstOrDefaultAsync(m => m.Id == id);
+            Servicios = await _context.Servicios.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Servicio == null)
+            if (Servicios == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
                 return Page();
             }
 
-            _context.Attach(Servicio).State = EntityState.Modified;
+            _context.Attach(Servicios).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ServicioExists(Servicio.Id))
+                if (!ServiciosExists(Servicios.Id))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace E_Migrant.App.Presentacion.Pages.CrudServicio
             return RedirectToPage("./Index");
         }
 
-        private bool ServicioExists(int id)
+        private bool ServiciosExists(int id)
         {
-            return _context.Servicio.Any(e => e.Id == id);
+            return _context.Servicios.Any(e => e.Id == id);
         }
     }
 }
