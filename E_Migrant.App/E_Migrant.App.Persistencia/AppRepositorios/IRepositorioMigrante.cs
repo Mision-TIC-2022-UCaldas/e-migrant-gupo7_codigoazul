@@ -13,7 +13,7 @@ namespace E_Migrant.App.Persistencia.AppRepositorios
 
          public void eliminarMigrante(int Id);
 
-         public void actualizarMigrante(Migrante migrante);
+         public void actualizarPersona(Migrante migrante);
          
     }
     

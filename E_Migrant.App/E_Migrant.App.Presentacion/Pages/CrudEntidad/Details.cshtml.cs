@@ -28,7 +28,12 @@ namespace E_Migrant.App.Presentacion.Pages.CrudEntidad
                 return NotFound();
             }
 
-            Entidad = await _context.Entidades.FirstOrDefaultAsync(m => m.Id == id);
+            Entidad = await _context.Entidades.Where(m => m.Id == id)
+            .Include(m => m.Ciudad)
+            .Include(m => m.Sector).FirstOrDefaultAsync();
+
+
+            //Entidad = await _context.Entidades.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Entidad == null)
             {

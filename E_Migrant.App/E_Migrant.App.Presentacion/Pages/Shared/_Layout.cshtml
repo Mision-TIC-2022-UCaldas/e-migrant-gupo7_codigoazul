@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,35 +7,65 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">E_Migrant.App.Presentacion</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">E_Migrant</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudMigrante/Create">Migrante, ¿Quieres
-                                registrarte?</a>
-                        </li>
+                        @using Microsoft.AspNetCore.Http;
+                        @inject IHttpContextAccessor HttpContextAccessor;
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudEntidad/Create">Entidad
-                                Colaboradora, ¿Quieres registrarte?</a>
-                        </li>
+                        @{var id = @HttpContextAccessor.HttpContext.Session.GetInt32("GetId");}
 
-                        <!--<li class="nav-item">
+                        @if (@HttpContextAccessor.HttpContext.Session.GetString("UsuarioAutenticado") != null &&
+                        @HttpContextAccessor.HttpContext.Session.GetString("UsuarioAutenticado").Equals("Migrante"))
+                        {                                                    
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudMigrante/Edit" asp-route-id="@id">Editar datos</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudMigrante/Details" asp-route-id="@id">Ver datos</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar sesión</a>
+                            </li>
+                        }else if(@HttpContextAccessor.HttpContext.Session.GetString("UsuarioAutenticado") != null &&
+                        @HttpContextAccessor.HttpContext.Session.GetString("UsuarioAutenticado").Equals("Entidad"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudEntidad/Edit" asp-route-id="@id">Editar datos</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudEntidad/Details" asp-route-id="@id">Ver datos</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudServicio/Create" asp-route-id="@id">Crear Servicio</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar sesión</a>
+                            </li>
+                        }
+                        else{
+                        <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/Login">Ingresar</a>
+                            </li>
+                                                    
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/CrudMigrante/Create">registrarte</a>
+                            </li>
+                            
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/CrudTipoDoc/Create">CrudTipoDoc</a>
                         </li>
 
@@ -49,20 +78,9 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudSector/Create">Sector</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudTipoServicio/Create">Tipo Servicio</a>
-                        </li>-->
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudServicio/Create">Servicio</a>
-                        </li>
-
-                        <!--<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/CrudSituacionLaboral/Create">CrudSituacionLaboral</a>
-                        </li>-->
+                        </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -86,5 +104,4 @@
 
     @RenderSection("Scripts", required: false)
 </body>
-
 </html>

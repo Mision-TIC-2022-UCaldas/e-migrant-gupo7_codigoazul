@@ -28,8 +28,13 @@ namespace E_Migrant.App.Presentacion.Pages.CrudMigrante
                 return NotFound();
             }
 
-            Migrante = await _context.Migrantes.FirstOrDefaultAsync(m => m.Id == id);
+            Migrante = await _context.Migrantes.Where(m => m.Id == id)
+            .Include(m => m.SituacionLaboral)
+            .Include(m => m.Ciudad)
+            .Include(m => m.TipoDocumento)
+            .Include(m => m.PaisOrigen).FirstOrDefaultAsync();
 
+            //m.Ciudad, m.TipoDocumento, m.PaisOrigen
             if (Migrante == null)
             {
                 return NotFound();

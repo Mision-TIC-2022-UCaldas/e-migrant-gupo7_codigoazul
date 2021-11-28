@@ -83,7 +83,7 @@ namespace E_Migrant.App.Presentacion.Pages.CrudMigrante
             _context.Migrantes.Add(Migrante);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Login/Login");
         }
     }
 }

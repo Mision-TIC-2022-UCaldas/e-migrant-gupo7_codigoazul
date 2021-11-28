@@ -10,3 +10,15 @@ C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstan
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csproj.CopyComplete
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.dll
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.pdb
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.deps.json
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.dll
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Persistencia.pdb
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.dll
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.pdb
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csprojAssemblyReference.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.AssemblyInfoInputs.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.AssemblyInfo.cs
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csproj.CoreCompileInputs.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.csproj.CopyComplete
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.dll
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Persistencia\obj\Debug\netstandard2.1\E_Migrant.App.Persistencia.pdb

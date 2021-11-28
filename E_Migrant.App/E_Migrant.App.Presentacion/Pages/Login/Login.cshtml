@@ -1,0 +1,27 @@
+﻿@page
+@model E_Migrant.App.Presentacion.LoginModel
+@{
+}
+
+<div class="signin-container">
+    <div class="row">
+        <form method="post">
+            <div class="form-group">
+                <label class="control-label">Usuario:</label>
+                <input type="text" class="form-control" asp-for="Usuario" placeholder="Digite su usuario"></input>
+            
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Contraseña:</label>
+                <input type="password" class="form-control" asp-for="Contraseña" placeholder="Digite su contraseña"></input>
+                
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Ingresar" class="btn btn-primary"></input>
+            </div>
+                <a asp-page="CambiarPassword">Olvide mi contraseña!</a>
+        </form>
+    </div>
+</div>

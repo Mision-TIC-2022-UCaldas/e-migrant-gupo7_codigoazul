@@ -29,6 +29,14 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Entidad.Direccion)
         </dd>
+
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Entidad.Ciudad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Entidad.Ciudad.NombreCiudad)
+        </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Entidad.Telefono)
         </dt>
@@ -47,6 +55,16 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Entidad.PaginaWeb)
         </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Entidad.Sector)
+        </dt>
+
+
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Entidad.Sector.NombreSector)
+        </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Entidad.Usuario)
         </dt>

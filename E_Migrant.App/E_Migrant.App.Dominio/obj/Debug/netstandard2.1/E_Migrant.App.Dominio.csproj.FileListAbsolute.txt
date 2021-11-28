@@ -7,3 +7,12 @@ C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.csproj.CoreCompileInputs.cache
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.dll
 C:\HACKATON\E_Migrant\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.pdb
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.deps.json
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.dll
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\bin\Debug\netstandard2.1\E_Migrant.App.Dominio.pdb
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.csprojAssemblyReference.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.AssemblyInfoInputs.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.AssemblyInfo.cs
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.csproj.CoreCompileInputs.cache
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.dll
+D:\Hackaton2021\e-migrant-gupo7_codigoazul\E_Migrant.App\E_Migrant.App.Dominio\obj\Debug\netstandard2.1\E_Migrant.App.Dominio.pdb

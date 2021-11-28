@@ -6,6 +6,7 @@ namespace E_Migrant.App.Dominio
     {
         public int Id {get; set;}
         public string NombreServicio {get; set;}
+        public int MaximoMigrantes {get; set;}
         public TipoServicio TipoServicio {get; set;}
         public DateTime FechaInicioOferta {get; set;}
         public DateTime FechaFinOferta {get; set;}

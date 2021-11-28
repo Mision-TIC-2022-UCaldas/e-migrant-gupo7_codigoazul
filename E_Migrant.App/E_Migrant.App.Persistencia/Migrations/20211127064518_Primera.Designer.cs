@@ -4,14 +4,16 @@ using E_Migrant.App.Persistencia.AppRepositorios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(Conexion))]
-    partial class ConexionModelSnapshot : ModelSnapshot
+    [Migration("20211127064518_Primera")]
+    partial class Primera
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,55 +34,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ciudad");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Entidad", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("CiudadId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Contraseña")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nit")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaginaWeb")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RazonSocial")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("SectorId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Usuario")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("rol")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CiudadId");
-
-                    b.HasIndex("SectorId");
-
-                    b.ToTable("Entidades");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Migrante", b =>
@@ -160,58 +113,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.ToTable("Pais");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.Sector", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("NombreSector")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sector");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("EntidadId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Estado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("FechaFinOferta")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("FechaInicioOferta")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MaximoMigrantes")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NombreServicio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TipoServicioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EntidadId");
-
-                    b.HasIndex("TipoServicioId");
-
-                    b.ToTable("Servicio");
-                });
-
             modelBuilder.Entity("E_Migrant.App.Dominio.SituacionLaboral", b =>
                 {
                     b.Property<int>("Id")
@@ -242,41 +143,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.ToTable("TipoDoc");
                 });
 
-            modelBuilder.Entity("E_Migrant.App.Dominio.TipoServicio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("EntidadId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NombreTipoServicio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EntidadId");
-
-                    b.ToTable("TipoServicio");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Entidad", b =>
-                {
-                    b.HasOne("E_Migrant.App.Dominio.Ciudad", "Ciudad")
-                        .WithMany()
-                        .HasForeignKey("CiudadId");
-
-                    b.HasOne("E_Migrant.App.Dominio.Sector", "Sector")
-                        .WithMany()
-                        .HasForeignKey("SectorId");
-
-                    b.Navigation("Ciudad");
-
-                    b.Navigation("Sector");
-                });
-
             modelBuilder.Entity("E_Migrant.App.Dominio.Migrante", b =>
                 {
                     b.HasOne("E_Migrant.App.Dominio.Ciudad", "Ciudad")
@@ -302,33 +168,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("SituacionLaboral");
 
                     b.Navigation("TipoDocumento");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Servicio", b =>
-                {
-                    b.HasOne("E_Migrant.App.Dominio.Entidad", "Entidad")
-                        .WithMany()
-                        .HasForeignKey("EntidadId");
-
-                    b.HasOne("E_Migrant.App.Dominio.TipoServicio", "TipoServicio")
-                        .WithMany()
-                        .HasForeignKey("TipoServicioId");
-
-                    b.Navigation("Entidad");
-
-                    b.Navigation("TipoServicio");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.TipoServicio", b =>
-                {
-                    b.HasOne("E_Migrant.App.Dominio.Entidad", null)
-                        .WithMany("TipoServicios")
-                        .HasForeignKey("EntidadId");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Entidad", b =>
-                {
-                    b.Navigation("TipoServicios");
                 });
 #pragma warning restore 612, 618
         }

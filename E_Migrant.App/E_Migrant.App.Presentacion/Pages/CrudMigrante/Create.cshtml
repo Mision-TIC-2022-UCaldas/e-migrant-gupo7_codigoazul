@@ -69,7 +69,7 @@
 
             <div class="form-group">
                 <label asp-for="Migrante.Ciudad" class="control-label"></label>
-                <select asp-for="CiudadID" class="form-control" asp-items="Model.listaCiudad" onchange="getValue()">
+                <select asp-for="CiudadID" class="form-control" asp-items="Model.listaCiudad" onchange="getValue()" required >
                     <option>Seleccione una ciudad</option>
                 </select>
                 <span asp-validation-for="Migrante.Ciudad" class="text-danger"></span>
